@@ -1,3 +1,43 @@
+:root {
+    --black-color: #263238;
+    --bace-color: #BAEF00;
+    --bace-color-hover: #D9FF56;
+    --bace-color-active: #A3D200;
+    --border-color: #E3E3E3;
+    --placeholder-color: #8D8D8D;
+}
+
 html {
     box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit; 
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: var(--black-color);
+}
+
+img {
+    min-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+/* контейнер потом нужно будет перенастроить. это начальная настройка */
+.comtainer {
+    min-width: 780px;
+    margin: 0 auto;
+    padding: 40px 15px;
+}
+
+@media (max-width: 740px) {
+
 }
