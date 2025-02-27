@@ -5,6 +5,7 @@
     --bace-color-active: #A3D200;
     --border-color: #E3E3E3;
     --placeholder-color: #8D8D8D;
+    --transition-duration: .3s;
 }
 
 html {
@@ -30,6 +31,82 @@ img {
 
 a {
     text-decoration: none;
+}
+
+/* ссылка */
+.default-link {
+    color: var(--black-color);
+    text-decoration: underline;
+    transition: color var(--transition-duration), background-color var(--transition-duration);
+}
+
+.default-link:focus-visible {
+    background-color: var(--bace-color);
+    outline: none;
+}
+
+.default-link:hover {
+    color: var(--bace-color-hover);
+}
+
+.default-link:active{
+    color: var(--bace-color-active);
+}
+
+/* Кнопка */
+.default-btn {
+    display: inline-block;
+    padding: 11px 47px;
+    color: var(--black-color);
+    border-radius: 12px;
+    background-color: var(--bace-color);
+    border: none;
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+    transition: outline-color var(--transition-duration), background-color var(--transition-duration);
+    cursor: pointer;
+}
+
+.default-btn:focus-visible {
+    outline-color: var(--bace-color);
+}
+
+.default-btn:hover {
+    background-color: var(--bace-color-hover);
+}
+
+.default-btn:active {
+    background-color: var(--bace-color-active);
+}
+
+/* Текстовое поле */
+.text-field {
+    padding: 11px 47px 11px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: border-color var(--transition-duration);
+    outline: none;
+}
+
+.text-field::placeholder {
+    color: var(--placeholder-color);
+}
+
+.text-field:focus {
+    border-color: var(--bace-color);
+}
+
+/* Подзаголовок */
+.subtitle {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+/* Лого */
+.logo {
+    height: 20px;
 }
 /* контейнер потом нужно будет перенастроить. это начальная настройка */
 .comtainer {
