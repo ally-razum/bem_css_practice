@@ -5,6 +5,7 @@
     --bace-color-active: #A3D200;
     --border-color: #E3E3E3;
     --placeholder-color: #8D8D8D;
+    --price-color: #6C6C6C;
     --transition-duration: .3s;
 }
 
@@ -15,7 +16,8 @@ html {
 *,
 ::after,
 ::before {
-    box-sizing: inherit; 
+    /* box-sizing: inherit;  */
+    box-sizing: border-box;
 }
 
 body {
@@ -23,7 +25,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     color: var(--black-color);
-    background-color: gray; /*!потом убатб*/
+    /* background-color: gray;  */
+    /*!потом убатб*/
 }
 
 img {
@@ -82,7 +85,7 @@ a {
 
 /* Текстовое поле */
 .text-field {
-    padding: 11px 47px 11px 16px;
+    padding: 11px 16px 11px 16px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: border-color var(--transition-duration);
@@ -108,6 +111,7 @@ a {
 /* Лого */
 .logo {
     height: 20px;
+    display: block;
 }
 
 /* меню */
@@ -140,13 +144,102 @@ a {
     color: var(--bace-color-active);
 }
 
+/* форма обратной связи */
+.callback-form {
+    display: flex;
+    gap: 16px;
+    /* max-width: 100% */
+}
+
+.callback-form__inp {
+    flex-basis: 280px;
+    /* width: 100%;  */
+}
+
+/* Карточка товара */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    /* overflow: hidden; */
+}
+.product-card_img {
+    height: 180px;
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 100%;
+    padding: 15px;
+}
+
+.product-card__body-top {
+    margin-bottom: 22px;
+}
+
+.product-card__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.product-card__price {
+    font-size: 18px;  
+    font-weight: 700;
+    color: var(--price-color);
+}
+
+.product-card__btn {
+    width: 100%;
+}
+
 /*! контейнер потом нужно будет перенастроить. это начальная настройка */
 .comtainer {
-    min-width: 780px;
+    /* min-width: 780px; */
     margin: 0 auto;
-    padding: 40px 15px;
+    padding: 40px 300px;
 }
 
 @media (max-width: 740px) {
+    /* форма обратной связи */
+    .callback-form {
+        flex-direction: column;
+    }
+
+    .callback-form__inp {
+        flex-basis: initial;
+    }
+
+    /* Карточка товара */
+
+    .product-card_img {
+        height: 90px;
+    }
+
+    .product-card__body {
+        padding: 10px;
+    }
+
+    .product-card__body-top {
+        margin-bottom: 22px;
+    }
+
+    .product-card__title {
+        font-size: 14px;
+    }
+    .product-card__price {
+        font-size: 14px;
+    }
 
 }
