@@ -204,11 +204,41 @@ a {
     width: 100%;
 }
 
+/* модификатор карточки(большая) */
+
+.product-card_big {
+    border: none;
+    position: relative;
+    height: 350px;
+}
+
+.product-card_img_big {
+    height: 100%;
+    border-radius: 12px;
+}
+
+.product-card__body_big {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 12px;
+    color: white;
+    align-items: flex-start;
+}
+
+.product-card__btn_big {
+    width: initial;
+}
+
+.product-card__price_big {
+    color: white;
+}
 /*! контейнер потом нужно будет перенастроить. это начальная настройка */
 .comtainer {
     /* min-width: 780px; */
     margin: 0 auto;
-    padding: 40px 300px;
+    padding: 40px 150px;
 }
 
 @media (max-width: 740px) {
@@ -240,6 +270,10 @@ a {
     }
     .product-card__price {
         font-size: 14px;
+    }
+
+    .product-card_img_big {
+        height: 100%;
     }
 
 }
